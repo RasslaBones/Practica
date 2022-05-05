@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #040A0A;
+  font-family: "Oswald", sans-serif;
+}
+
+.header__image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 1240px;
+}
+
+.header__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.header__menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header__menu li {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
