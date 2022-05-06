@@ -14,27 +14,104 @@ body{
     font-family: $Oswald;
 }
 
-.header__image{
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    height: 1240px;
-    img{
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
+.absolute{
+    position: absolute;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.green-text{
+    color: $cyan-color;
+}
+
+.tiny-text{
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.margin-top20{
+    margin-top: 20px;
+}
+
+.title{
+    font-size: 12rem;
+    color: white;
+    font-family: $Cormorant;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    // animation: anim 5s alternate infinite;
+    span:nth-child(1){
+        z-index: -1;
     }
 }
 
-.header__menu{
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    font-size: 14px;
-    text-transform: uppercase;
-    cursor: pointer;
-    li{
-        color:white
+.header{
+    width: 100%;
+    height: 1440px;
+    background: no-repeat center/cover url("/images/header-img.png");
+    &__half{
+        background: no-repeat center/cover url("/images/header-img-half.png");
+        width: 100%;
+        height: 1130px;
+        z-index: 10;
+    }
+    &__elipse-blue{
+        width: 360px;
+        height: 295px;
+        background: #249479;
+        filter: blur(150px);
+        transform: rotate(43deg);
+        left: 100px;
+        top: 600px;
+        z-index: 1;
+    }
+    &__elipse-red{
+        width: 470px;
+        height: 210px;
+        right: 80px;
+        top: 450px;
+        background: #7D2253;
+        filter: blur(150px);
+        transform: rotate(-43deg);
+        z-index: 1;
+    }
+    &__container{
+        margin: 20px 10%;
+        width: 80%;
+        &__navbar{
+            display: flex;
+            color: white;
+            list-style: none;
+            align-items: center;
+            gap: 60px;
+            text-transform: uppercase;
+            padding: 0;
+            width: 100%;
+            li{
+                display: flex;
+                gap: 20px;
+                align-items: center;
+            }
+        }
+        &__contacts{
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            color: white;
+            margin-top: -70px;
+        }
+    }
+}
+
+@keyframes anim{
+    0%{
+        margin-top: 0px;
+    }
+    50%{
+        margin-top: 20px;
     }
 }
