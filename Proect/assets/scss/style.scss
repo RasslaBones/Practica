@@ -80,6 +80,7 @@ body{
         z-index: 1;
     }
     &__container{
+        position: relative;
         margin: 20px 10%;
         width: 80%;
         &__navbar{
@@ -97,12 +98,43 @@ body{
                 align-items: center;
             }
         }
+
         &__contacts{
             display: flex;
             flex-direction: column;
             text-align: right;
             color: white;
             margin-top: -70px;
+        }
+
+        &__socials{
+            position: absolute;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(20px);
+            right: 0;
+            top: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            svg{
+                cursor: pointer;
+            }
+        }
+        &__hero{
+            font-size: 20px;
+            text-align: center;
+            color: white;
+            letter-spacing: .1em;
+        }
+        &__button{
+            width: min-content;
+            padding: 10px 60px;
+            margin-top: 40px;
+            margin: 0 auto;
+            background-color: $cyan-color;
+            text-transform: uppercase;
         }
     }
 }

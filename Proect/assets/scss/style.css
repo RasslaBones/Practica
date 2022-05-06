@@ -71,6 +71,7 @@ body {
   z-index: 1;
 }
 .header__container {
+  position: relative;
   margin: 20px 10%;
   width: 80%;
 }
@@ -95,6 +96,38 @@ body {
   text-align: right;
   color: white;
   margin-top: -70px;
+}
+.header__container__socials {
+  position: absolute;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  right: 0;
+  top: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.header__container__socials svg {
+  cursor: pointer;
+}
+.header__container__hero {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  letter-spacing: 0.1em;
+}
+.header__container__button {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 10px 60px;
+  margin-top: 40px;
+  margin: 0 auto;
+  background-color: #43FFD2;
+  text-transform: uppercase;
 }
 
 @-webkit-keyframes anim {
