@@ -1,0 +1,89 @@
+$bg-color: #373737;
+
+$btn-color: #C80000;
+$btn-active-color: #EF0505;
+$btn-disabled-color: #E0E0E0;
+
+$white: #FFFFFF;
+
+$Montserrat: 'Montserrat', sans-serif;
+
+@use "sass:math";
+@import "mixins";
+@import "lib";
+
+// @include adaptiveValue("font-size",240 ,50);
+// @include adaptiveValue("padding-right",35 ,0);
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: $bg-color;
+    font-family: $Montserrat;
+    height: 500vh;
+}
+
+.header{
+    width: 100%;
+    .bg-image{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .navbar{
+        padding: 20px 10%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 0%;
+        left: 0%;
+        width: 80%;
+        background-color: rgba($color: #333333, $alpha: 0.8);
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        &-left, &-right{
+            position: relative;
+            display: flex;
+            gap: 40px;
+            width: 50%;
+            align-items: center;
+            img{
+                
+            }
+        }
+        &-right{
+            direction: rtl;
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+}
+
+.select{
+    width: 80%;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cell{
+        margin-top: 30px;
+        text-align: center;
+        cursor: pointer;
+        color: rgba($color: #FFFFFF, $alpha: 0.4); 
+        img{
+            padding: 30px 0 ;
+        }
+        .desc{
+            font-weight: 500;
+            font-size: 18px;                     
+        }
+        &:hover{
+            color: $btn-active-color;
+        }
+    
+    }
+}
