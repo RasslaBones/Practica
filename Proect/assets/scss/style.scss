@@ -1,0 +1,183 @@
+$bg-color: #373737;
+
+$card-color: #272727;
+
+$btn-color: #C80000;
+$btn-active-color: #EF0505;
+$btn-disabled-color: #E0E0E0;
+
+$white: #FFFFFF;
+
+$Montserrat: 'Montserrat', sans-serif;
+
+@use "sass:math";
+@import "mixins";
+@import "lib";
+
+// @include adaptiveValue("font-size",240 ,50);
+// @include adaptiveValue("padding-right",35 ,0);
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: $bg-color;
+    font-family: $Montserrat;
+    height: 500vh;
+}
+
+.header{
+    width: 100%;
+    .bg-image{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .navbar{
+        padding: 20px 10%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 0%;
+        left: 0%;
+        width: 80%;
+        background-color: rgba($color: #333333, $alpha: 0.8);
+        color: white;
+        font-weight: 700;
+        font-size: 20px;
+        &-left, &-right{
+            position: relative;
+            display: flex;
+            gap: 40px;
+            width: 50%;
+            align-items: center;
+        }
+        &-right{
+            direction: rtl;
+        }
+        img{
+            cursor: pointer;
+        }
+    }
+}
+
+.select{
+    width: 80%;
+    padding: 0 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .cell{
+        margin-top: 30px;
+        text-align: center;
+        cursor: pointer;
+        color: rgba($color: #FFFFFF, $alpha: 0.4); 
+        img{
+            padding: 30px 0 ;
+        }
+        .desc{
+            font-weight: 500;
+            font-size: 18px;                     
+        }
+        &:hover{
+            color: $btn-active-color;
+        }
+    }
+}
+
+.popular{
+    padding: 80px 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+
+    &__box{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        margin-top: 20px;
+        .base-img{
+            position: relative;
+            @include adaptiveValue("width",590,300);
+            img {
+                width: 100%;
+            }
+            .base-text{
+                position: absolute;
+                bottom: 0%;
+                left: 0;
+                color: white;
+                font-size: 20px;
+            }
+            .base-arrow{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+        
+        &__cell{
+            }
+            &__bg{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $card-color;
+                border-radius: 10px;
+                @include adaptiveValue("width",285,185);
+                height: 400px;
+                cursor: pointer;
+                &__plus{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 40px;
+                    height: 40px;
+                    background-color: none;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            &__desc{
+                width: 100%;
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                @include adaptiveValue("font-family",20,12);
+                &__name{
+                    color: white;
+                }
+                &__price{
+                    display: flex;
+                    gap: 20px;
+                    .item{
+                        color: #FFFFFF;
+                        opacity: 0.5;
+                        &-new{
+                            color: $btn-active-color;
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+        #bg-image{
+            // display: block;
+            position: relative;
+            background: no-repeat center center/cover url("/images/knives_1.png");
+            padding: 0;
+            img{
+                position: absolute;
+                top: 50px;
+                right: 30%;
+                transform: translate(50%,-50%);
+            }
+        }
+    }
+

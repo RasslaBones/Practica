@@ -1,0 +1,208 @@
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+[class*=__container] {
+  max-width: 90rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 2.1875rem;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #373737;
+  font-family: "Montserrat", sans-serif;
+  height: 500vh;
+}
+
+.header {
+  width: 100%;
+}
+.header .bg-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header .navbar {
+  padding: 20px 10%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0%;
+  left: 0%;
+  width: 80%;
+  background-color: rgba(51, 51, 51, 0.8);
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+.header .navbar-left, .header .navbar-right {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  width: 50%;
+  align-items: center;
+}
+.header .navbar-right {
+  direction: rtl;
+}
+.header .navbar img {
+  cursor: pointer;
+}
+
+.select {
+  width: 80%;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.select .cell {
+  margin-top: 30px;
+  text-align: center;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.4);
+}
+.select .cell img {
+  padding: 30px 0;
+}
+.select .cell .desc {
+  font-weight: 500;
+  font-size: 18px;
+}
+.select .cell:hover {
+  color: #EF0505;
+}
+
+.popular {
+  padding: 80px 10%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.popular__box {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  margin-top: 20px;
+}
+.popular__box .base-img {
+  position: relative;
+}
+@supports (width: clamp( 18.75rem , 13.8760504202rem  +  24.3697478992vw , 36.875rem )) {
+  .popular__box .base-img {
+    width: clamp( 18.75rem , 13.8760504202rem  +  24.3697478992vw , 36.875rem );
+  }
+}
+@supports not (width: clamp( 18.75rem , 13.8760504202rem  +  24.3697478992vw , 36.875rem )) {
+  .popular__box .base-img {
+    width: calc(18.75rem + 18.125 * (100vw - 20rem) / 74.375);
+  }
+}
+.popular__box .base-img img {
+  width: 100%;
+}
+.popular__box .base-img .base-text {
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  color: white;
+  font-size: 20px;
+}
+.popular__box .base-img .base-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.popular__box__bg {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #272727;
+  border-radius: 10px;
+  height: 400px;
+  cursor: pointer;
+}
+@supports (width: clamp( 11.5625rem , 9.8818277311rem  +  8.4033613445vw , 17.8125rem )) {
+  .popular__box__bg {
+    width: clamp( 11.5625rem , 9.8818277311rem  +  8.4033613445vw , 17.8125rem );
+  }
+}
+@supports not (width: clamp( 11.5625rem , 9.8818277311rem  +  8.4033613445vw , 17.8125rem )) {
+  .popular__box__bg {
+    width: calc(11.5625rem + 6.25 * (100vw - 20rem) / 74.375);
+  }
+}
+.popular__box__bg__plus {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular__box__desc {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+@supports (font-family: clamp( 0.75rem , 0.6155462185rem  +  0.6722689076vw , 1.25rem )) {
+  .popular__box__desc {
+    font-family: clamp( 0.75rem , 0.6155462185rem  +  0.6722689076vw , 1.25rem );
+  }
+}
+@supports not (font-family: clamp( 0.75rem , 0.6155462185rem  +  0.6722689076vw , 1.25rem )) {
+  .popular__box__desc {
+    font-family: calc(0.75rem + 0.5 * (100vw - 20rem) / 74.375);
+  }
+}
+.popular__box__desc__name {
+  color: white;
+}
+.popular__box__desc__price {
+  display: flex;
+  gap: 20px;
+}
+.popular__box__desc__price .item {
+  color: #FFFFFF;
+  opacity: 0.5;
+}
+.popular__box__desc__price .item-new {
+  color: #EF0505;
+}
+.popular #bg-image {
+  position: relative;
+  background: no-repeat center center/cover url("/images/knives_1.png");
+  padding: 0;
+}
+.popular #bg-image img {
+  position: absolute;
+  top: 50px;
+  right: 30%;
+  transform: translate(50%, -50%);
+}/*# sourceMappingURL=style.css.map */
