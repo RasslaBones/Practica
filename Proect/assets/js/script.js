@@ -1,10 +1,9 @@
-words = document.querySelectorAll(".word");
-words.forEach(element=>{
+let word = document.querySelectorAll(".word");
+word.forEach(element=>{
     element.addEventListener("click",()=>{
-        words.forEach(el=>{
-            el.classList.remove("selected")
+        word.forEach(e=>{
+            e.classList.remove("selected")
         })
         element.classList.add("selected")
     })
 })
-
