@@ -1,10 +1,10 @@
-const redPlus = () =>{
-    plus = document.querySelectorAll(".popular__box__cell__bg__plus");
-    plus.forEach(element=>{
-        element.style.backgroundColor = "#EF0505";
+words = document.querySelectorAll(".word");
+words.forEach(element=>{
+    element.addEventListener("click",()=>{
+        words.forEach(el=>{
+            el.classList.remove("selected")
+        })
+        element.classList.add("selected")
     })
-}
-cards = document.querySelectorAll(".popular__box__cell__bg");
-cards.forEach(element=>{
-    element.addEventListener("onmouseover", redPlus())
 })
+
