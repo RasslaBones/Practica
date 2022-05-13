@@ -1,0 +1,32 @@
+let word = document.querySelectorAll(".word");
+word.forEach(element=>{
+    element.addEventListener("click",()=>{
+        word.forEach(e=>{
+            e.classList.remove("selected")
+        })
+        element.classList.add("selected")
+    })
+})
+
+let plus = document.querySelectorAll(".popular__box__cell__bg__plus");
+let card = document.querySelectorAll(".popular__box__cell")
+let img = document.createElement("img")
+img.src = "/images/icons/bag-white.png"
+plus.forEach(element=>{
+    element.addEventListener("click",()=>{
+        if(element.classList.contains("active"))
+        {
+            element.removeChild(img)
+            element.classList.remove("active")
+            return 0;
+        }
+        element.classList.add("active");
+        element.appendChild(img);
+        card.forEach(el=>{
+            el.addEventListener("mouseleave", ()=>{
+                element.classList.remove("active")
+                img.remove()
+            })
+        })
+    })
+})
